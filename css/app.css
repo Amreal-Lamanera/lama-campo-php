@@ -267,6 +267,7 @@ a {
     font-size: 1.5rem;
     background-color: rgb(132, 132, 132);
     border-radius: 1rem;
+    box-shadow: 0 0 10px #FFF;
 }
 
 #top_players {
