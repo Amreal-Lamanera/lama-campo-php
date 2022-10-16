@@ -23,6 +23,16 @@ class Result
         return $res;
     }
 
+    static public function records()
+    {
+        $conn = DB::getConn();
+        $sql = "SELECT * FROM `records` ORDER BY `points` DESC";
+        $result = $conn->query($sql);
+        $conn->close();
+        $res = Result::resultToArray($result);
+        return $res;
+    }
+
     // vorrei come risultato un array in cui ogni elemento è un istanza di department
     static public function resultToArray($result)
     {

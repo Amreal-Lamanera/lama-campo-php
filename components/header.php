@@ -5,7 +5,7 @@
 
             <div class="logo d-flex align-items-center">
 
-                <a href="../index.html" class="me-3">
+                <a href="./" class="me-3">
                     <img src="img/lama.PNG" alt="My Logo">
                 </a>
 
@@ -24,6 +24,9 @@
                     <li class="nav-item dropdown">
 
                         <div class="btns pt-3 pt-lg-0">
+                            <a href="./records.php">
+                                <input type="button" value="Classifica">
+                            </a>
                             <span class="me-3 text-white">Difficoltà:</span>
                             <select id="difficulty">
                                 <option value="10">Easy</option>

@@ -13,7 +13,7 @@ if (count($r) < 10 || $r[0]->points < $params[0]) {
             Nuovo Record!
         </h2>
         <div>
-            <form action="index.php" method="POST">
+            <form action="records.php" method="POST">
                 <label for="nickname">
                     Inserisci il tuo nome:
                 </label>

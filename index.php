@@ -34,7 +34,7 @@
     include './components/header.php';
     ?>
 
-    <main>
+    <main class="main">
 
         <?php
         include_once __DIR__ . '/app/Result.php';
