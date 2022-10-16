@@ -42,7 +42,6 @@
         if (count($_POST) > 0) {
             $r = new Result(100, $_POST['nickname'], $_POST['result']);
             $r->add();
-            array_splice($_POST, 0);
         }
         ?>
 

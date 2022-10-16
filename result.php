@@ -7,7 +7,8 @@ $params = $_POST['params'];
 // var_dump(count($r));
 
 if (count($r) < 10 || $r[0]->points < $params[0]) {
-    // var_dump($r[0]->points, $params[0]);
+    if (count($r) == 10)
+        $r[0]->remove();
 ?>
     <div id="new_record">
         <h2>
@@ -30,8 +31,6 @@ if (count($r) < 10 || $r[0]->points < $params[0]) {
     </div>
 <?php
 }
-if (count($r) == 10)
-    $r[0]->remove();
 ?>
 
 <style type="text/css">
