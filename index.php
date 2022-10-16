@@ -31,6 +31,7 @@
 <body class="d-flex flex-column">
 
     <?php
+    $file = 'index';
     include './components/header.php';
     ?>
 

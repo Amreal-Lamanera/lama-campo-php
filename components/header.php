@@ -24,16 +24,22 @@
                     <li class="nav-item dropdown">
 
                         <div class="btns pt-3 pt-lg-0">
-                            <a href="./records.php">
-                                <input type="button" value="Classifica">
+                            <a href="<?= $file == 'records' ? './' : './records.php' ?>">
+                                <input type="button" value="<?= $file == 'records' ? 'Home' : 'Classifica' ?>">
                             </a>
-                            <span class="me-3 text-white">Difficoltà:</span>
-                            <select id="difficulty">
-                                <option value="10">Easy</option>
-                                <option value="14">Medium</option>
-                                <option value="22">Hard</option>
-                            </select>
-                            <input type="submit" value="Play">
+                            <?php
+                            if ($file != 'records') {
+                            ?>
+                                <span class="me-3 text-white">Difficoltà:</span>
+                                <select id="difficulty">
+                                    <option value="10">Easy</option>
+                                    <option value="14">Medium</option>
+                                    <option value="22">Hard</option>
+                                </select>
+                                <input type="submit" value="Play">
+                            <?php
+                            }
+                            ?>
                         </div>
 
                     </li>
