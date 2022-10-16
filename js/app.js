@@ -439,11 +439,12 @@ function revealArea(x, y) {
 function youWin() {
     timerStop();
     clearGame();
+    const result = calcResult();
     statusImg.src = "img/cool.png";
-    bombsNumElement.innerHTML = "Hai vinto! <br> Hai totalizzato: " + calcResult() + " punti";
+    bombsNumElement.innerHTML = "Hai vinto! <br> Hai totalizzato: " + result + " punti";
     revealAll();
-    // window.location.assign(`${window.location.pathname}index.php?result=${result}`);
-
+    var parametri = [result];
+    $("#results").load("result.php", { params: parametri });
 }
 
 /****************************************************************
@@ -459,7 +460,6 @@ function gameOver(elem) {
     revealAll(elem);
     flagBtn.classList.add('disabled');
     clearGame();
-    // window.location.assign(`${window.location.pathname}index.php?result=${result}`);
     var parametri = [result];
     $("#results").load("result.php", { params: parametri });
 }
