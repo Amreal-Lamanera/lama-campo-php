@@ -7,6 +7,7 @@ $params = $_POST['params'];
 // var_dump(count($r));
 
 if (count($r) < 10 || $r[0]->points < $params[0]) {
+    // var_dump($r[0]->points, $params[0]);
 ?>
     <div id="new_record">
         <h2>

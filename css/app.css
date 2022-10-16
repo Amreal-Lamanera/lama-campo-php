@@ -268,3 +268,39 @@ a {
     background-color: rgb(132, 132, 132);
     border-radius: 1rem;
 }
+
+#top_players {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.records-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+
+.player,
+.points {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.player {
+    font-weight: bold;
+}
+
+.key {
+    flex-basis: 0;
+    font-weight: normal;
+}
+
+.player .name {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}

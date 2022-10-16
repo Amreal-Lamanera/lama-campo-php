@@ -45,12 +45,33 @@
                 $r = new Result(100, $_POST['nickname'], $_POST['result']);
                 $r->add();
             }
-
-            $r = Result::records();
-            foreach ($r as $el) {
-                echo "<span>Nickname: $el->nickname | Punteggio: $el->points</span><br/>";
-            }
             ?>
+
+            <h2 id="top_players">Top 10 players</h2>
+            <div class="records-wrapper">
+                <div class="player mb-3 p-2 border-bottom border-dark">
+                    <span class="ps-2">Nickname</span>
+                </div>
+                <div class="points mb-3 p-2 border-bottom border-dark">
+                    <span>Punteggio</span>
+                </div>
+                <?php
+                $r = Result::records();
+                foreach ($r as $key => $el) {
+                ?>
+                    <div class="player">
+                        <span class="key">
+                            <?= $key + 1 ?>.
+                        </span>
+                        <span class="ps-2 name"><?= $el->nickname ?></span>
+                    </div>
+                    <div class="points">
+                        <span><?= $el->points ?></span>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
         </div>
     </main>
 
