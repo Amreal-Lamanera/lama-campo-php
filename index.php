@@ -37,15 +37,6 @@
 
     <main class="main">
 
-        <?php
-        include_once __DIR__ . '/app/Result.php';
-
-        if (count($_POST) > 0) {
-            $r = new Result(100, $_POST['nickname'], $_POST['result']);
-            $r->add();
-        }
-        ?>
-
         <div id="results">
         </div>
 

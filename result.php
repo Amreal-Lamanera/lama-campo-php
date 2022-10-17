@@ -2,13 +2,7 @@
 include_once __DIR__ . '/app/Result.php';
 $r = Result::all();
 $params = $_POST['params'];
-// $r[] = new Result(3, 'nuovo2', $params[0]);
-// $r[count($r) - 1]->add();
-// var_dump(count($r));
-
 if (count($r) < 10 || $r[0]->points < $params[0]) {
-    if (count($r) == 10)
-        $r[0]->remove();
 ?>
     <div id="new_record">
         <h2>

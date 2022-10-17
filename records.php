@@ -42,9 +42,21 @@
             <?php
             include_once __DIR__ . '/app/Result.php';
 
-            if (count($_POST) > 0) {
-                $r = new Result(100, $_POST['nickname'], $_POST['result']);
-                $r->add();
+            if (!empty($_POST)) {
+                if ($_POST['nickname'] != '') {
+                    $r = new Result(100, $_POST['nickname'], $_POST['result']);
+                    $r->add();
+                    $all = Result::all();
+                    // var_dump($all);
+                    while (count($all) > 10) {
+                        $all[0]->remove();
+                        $all = Result::all();
+                    }
+                    // var_dump($all);
+                    // header('HTTP/1.1 303 See Other');
+                    header('Location: ./records.php');
+                    die();
+                }
             }
             ?>
 

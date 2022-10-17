@@ -1,3 +1,5 @@
 1. SE fai record e non lo vuoi salvare COMUNQUE viene cancellato il record n.10
+(RISOLTO - spostata la cancellazione dell'ultimo elemento in records.php)
 2. SE hai appena salvato il tuo nome in classifica e ricarichi la pagina reinviando il modulo verrà salvato di nuovo rischiando di ampliare la classifica oltre i 10 record, fra le altre cose..
+(RISOLTO - facendo un redirect + die())
 3. un vecchio bug.. in modalità easy, in versione mobile c'è una piccola probabilità di vincere con una sola casella scoperta e fare "infinity" punti
