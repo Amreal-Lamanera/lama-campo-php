@@ -1,3 +1,6 @@
+<?php
+ob_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,10 +55,13 @@
                         $all[0]->remove();
                         $all = Result::all();
                     }
-                    // var_dump($all);
-                    // header('HTTP/1.1 303 See Other');
-                    header('Location: ./records.php');
+                    header('Location:./records.php');
                     die();
+                    // SOLUZIONE PROBLEMA:
+                    // https://stackoverflow.com/questions/12525251/header-location-not-working-in-my-php-code
+                    // ob_start() a inizio pagina, oppure iniettare JS al posto di header()
+                    // echo "<script>window.location.href='./records.php';</script>";
+                    // die();
                 }
             }
             ?>
